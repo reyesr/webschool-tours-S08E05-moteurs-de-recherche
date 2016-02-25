@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Webschool Tours S08E05</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="js/soundex.js"></script>
+
+		<style>
+			.smaller {
+				font-size: 0.75em !important;
+			}
+
+			.soft-highlight {
+				color: #ffc520;
+			}
+
+			.topmargin {
+				margin-top: 1em !important;
+			}
+			img.noborder {
+				border: 0px !important;
+			}
+			.token {
+				background-color: white;
+				border: 1px solid #AAA;
+				color: black;
+				margin-right: 8px !important;
+				padding: 0px 8px 0px 8px !important;
+			}
+			.ponderation {
+				float: right;
+				color: greenyellow;
+				font-weight: bold;
+				margin-left: 16px;;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Webschool Tours</h1>
+					<h2>S08E05</h2>
+					<h3>Démystifions les moteurs de recherche</h3>
+					<p>
+						<small><a href="#">Rodrigo Reyes</a> / <a href="http://twitter.com/nogunner">@nogunner</a></small>
+
+					</p>
+					<p>
+						<a class="smaller" href="http://reyesr.github.io/webschool-tours-S08E05-moteurs-de-recherche">http(s)://reyesr.github.io/webschool-tours-S08E05-moteurs-de-recherche</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Votre speaker</h2>
+					<h4>Rodrigo Reyes</h4>
+					<ul>
+						<li>Linguiste</li>
+						<li>Informaticien</li>
+						<li>CTO Orthomatique</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>À propos</h2>
+					<h4>Sujets traités</h4>
+					<ul>
+						<li>La recherche de documents textuels</li>
+						<li>Les traitements linguistiques qui améliorent les résultats</li>
+					</ul>
+					<h4 style="margin-top: 2em;">Sujets non-traités</h4>
+					<ul>
+						<li>« l'algorithme de Google »</li>
+						<li>Ni rien sur comment améliorer son positionnement SEO</li>
+					</ul>
+					<p class="soft-highlight">Présentation destinée à l'édification personnelle</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>La recherche de documents</h2>
+					</section>
+
+					<section>
+						<!--sources: http://www.enssib.fr/content/bonjour-ma-question-porte-sur-le-catalogage-lindexation-et-lexemplarisation-jai-tendance -->
+						<h2>Comment retrouver une information ?</h2>
+
+						<ul>
+							<li>Étiquetage: par mots clés (vocabulaire contrôlé)</li>
+							<li>Classification: catégories et sous-catégories</li>
+							<li>Recherche plein texte (full-text)</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Recherche plein texte</h2>
+						<ul>
+							<li>Texte libre</li>
+							<li>Porte sur le contenu textuel</li>
+							<li>/!\ uniquement sur le contenu textuel</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Les cousins germains</h2>
+						<ul>
+							<li>Le tri-routage <br/><span class="smaller">veille concurrentielle, alertes, filtrage, classification automatique</span></li>
+							<li>Analyse sémantique <br/><span class="smaller">catégorisation de contenu, repérage d'entités nommées, analyse de sentiments</span></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Moteur de recherche</h2>
+						<ul>
+							<li>Service permettant de trouver/retrouver des documents</li>
+							<li>À partir d'une requête en texte libre</li>
+						</ul>
+						<h4 style="margin-top: 2em;">Objectif</h4>
+						<p>
+							Trouver les documents pertinents qui correspondent à la requête
+						</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Première étape</h2>
+						<h3>Trouver les documents</h3>
+					</section>
+					<section>
+						<h2>L'index inversé</h2>
+						<h4>cette brique technique injustement méconnue</h4>
+					</section>
+
+					<section>
+						<h2>Pourquoi inversé</h2>
+
+						<ul>
+							<li>Pas inversé: du document vers les éléments qui le composent
+								<br>
+								<table>
+									<tr>
+										<td>Doc1 &rarr;</td><td>mot1, mot2, mot3, ...</td>
+									</tr>
+									<tr>
+										<td>Doc2 &rarr;</td><td>mot2, mot4, mot5, ...</td>
+									</tr>
+								</table>
+							</li>
+							<li>Inversé: de l'élément vers les documents qui le contiennent
+								<br>
+								<table>
+									<tr>
+										<td>Mot1 &rarr;</td><td>Doc1, Doc45, Doc76, ...</td>
+									</tr>
+									<tr>
+										<td>Mot2 &rarr;</td><td>Doc1, Doc2, Doc18, ...</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Mise en application</h2>
+					</section>
+
+					<section>
+						<h2>Recherche dans une base de 2 documents</h2>
+						<table>
+							<tr>
+								<td>Doc1</td><td>Le, chat, a, miaulé, dans, la, grange</td>
+							</tr>
+							<tr>
+								<td>Doc2</td><td>Félix, le, chat, repartira, demain</td>
+							</tr>
+						</table>
+
+						<hr>
+						<h4>Recherchons dans l'index inversé</h4>
+						<ul>
+							<li>chat</li>
+							<li>Félix le chat</li>
+							<li>miauler granges</li>
+							<li>felix</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Recherche dans une base de 2 documents (2)</h2>
+						<p>Normalisation du texte: minuscule sans accent</p>
+						<table>
+							<tr>
+								<td>Doc1</td><td>le, chat, a, miaule, dans, la, grange</td>
+							</tr>
+							<tr>
+								<td>Doc2</td><td>felix, le, chat, repartira, demain</td>
+							</tr>
+						</table>
+						<hr>
+						<h4 >Recherchons dans l'index inversé</h4>
+						<ul>
+							<li>chat</li>
+							<li>Félix le chat</li>
+							<li>miauler granges</li>
+							<li>felix</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Recherche dans une base de 2 documents (3)</h2>
+						<p>minuscule sans accent <br> + lemmatisation (lemme = forme canonique, «neutre»)</p>
+						<table>
+							<tr>
+								<td>Doc1</td><td>le, chat, avoir, miauler, dans, le, grange</td>
+							</tr>
+							<tr>
+								<td>Doc2</td><td>felix, le, chat, repartir, demain</td>
+							</tr>
+						</table>
+						<hr>
+						<ul>
+							<li>chat</li>
+							<li>chattes</li>
+							<li>miauler granges</li>
+							<li>avoir grange</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h2>Résumé de la mise en pratique</h2>
+						<ul>
+							<li>Un index inversé</li>
+							<li>Un pré-traitement de normalisation (textuel ou linguistique) sur les mots</li>
+							<li>Mais des problèmes et difficultés: <br>
+								<span class="smaller">choix des prétraitements - pertinence - niveau de normalisation</span>
+							</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Calculer la page de résultat</h2>
+					</section>
+
+					<section>
+						<h2>Qu'est-ce qu'un résultat?</h2>
+						<img class="stretch " style="background-color: #FFF; border: 16px solid white;" src="img/sets.png">
+					</section>
+
+					<section>
+						<h2>Calculer un résultat</h2>
+						<img class="" style="float:left; background-color: #FFF; width: 20%;" src="img/sets.png">
+						<h4>Ensembles &amp; algèbre booléenne</h4>
+						<p>
+							1 terme = 1 ensemble de documents
+						 <br>Le résultat est l'intersection des ensembles
+						</p>
+						<h4>Calcul de score</h4>
+						<p>
+							1 terme = 1 ensemble de documents
+							<br>On attribue un total de scores à chaque document
+							<br>Le résultat est la liste des documents triés par leur score
+						</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Évaluer les résultats</h2>
+						<h4>interlude mathématique</h4>
+					</section>
+
+					<section>
+						<h2>Contexte documentaire</h2>
+						<img class="stretch" style="background-color: #FFF; border: 16px solid white;" src="img/sets-and-docs.png">
+					</section>
+
+					<section>
+						<h2>Évaluer la qualité</h2>
+						<h3>La précision</h3>
+						<p>
+							Calcul le taux de faux positifs (documents non-pertinents retournés)
+						</p>
+						<table>
+							<tr><td rowspan="2" style="vertical-align: middle; border-bottom: 0px; ">Précision = </td><td style="text-align: center;">Nombre de résultats pertinents retournés</td></tr>
+							<tr><td style="text-align: center;">Nombre total de résultats retournés</td></tr>
+						</table>
+
+						<h3 class="topmargin">Le rappel (recall)</h3>
+						<p>
+							Calcul le taux de faux négatifs (documents pertinents ratés)
+						</p>
+						<table>
+							<tr><td rowspan="2" style="vertical-align: middle; border-bottom: 0px; ">Rappel = </td><td style="text-align: center;">Nombre de résultats pertinents retournés</td></tr>
+							<tr><td style="text-align: center;">Nombre total de résultats pertinents dans la base</td></tr>
+						</table>
+					</section>
+
+					<section>
+						<h2>Impact des pré-traitements</h2>
+						<h3>Normalisation «légère»</h3>
+						<p class="smaller">minuscule, effacement des diacritiques, lemmatisation</p>
+						<p>&rarr; Bonne précision, rappel bas</p>
+						<h3 class="topmargin">Normalisation «agressive»</h3>
+						<p class="smaller">normalisation phonétique, racinisation</p>
+						<p>&rarr; Précision basse, bon rappel</p>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Traitements du texte</h2>
+					</section>
+
+					<section>
+						<h2>Chaine de traitement</h2>
+						<ol>
+							<li>Tokenisation: découpages en unités lexicales
+								<br><span class="smaller">Spécifique à chaque langue</span>
+								<br><span class="smaller">mots multiples: compte rendu, aujourd'hui, donne-moi vs couvre-feu</span>
+								<br><span class="smaller">patterns particuliers: (800) 123-4567, 11/02/2016</span>
+							</li>
+							<li class="topmargin">
+								Normalisation: transformer chaque unité lexicale
+								<br><span class="smaller">Également spécifique à chaque langue</span>
+								<br><span class="smaller">Grande variété de normalisations</span>
+							</li>
+							<li  class="topmargin">
+								Stockage: chaque unité lexicale pointe sur un ensemble de documents
+								<br><span class="smaller">Pondération contextuelle (titre, corps de page, annexes)</span>
+								<br><span class="smaller">Nombre d'occurrences, colocations, </span>
+							</li>
+						</ol>
+					</section>
+
+					<section>
+						<h2>Chaine de traitement (2)</h2>
+						<h5>Document brut</h5>
+						<p>Demain, les élèves mangeront des frites.</p>
+						<h5>Tokens</h5>
+						<p>
+							<span class="token">Demain</span>
+							<span class="token">les</span>
+							<span class="token">élèves</span>
+							<span class="token">mangeront</span>
+							<span class="token">des</span>
+							<span class="token">frites</span>
+						</p>
+						<h5>Normalisation (casse + diacritiques + lemmatisation)</h5>
+						<p>
+							<span class="token">demain</span>
+							<span class="token">un</span>
+							<span class="token">eleve</span>
+							<span class="token">manger</span>
+							<span class="token">un</span>
+							<span class="token">frite</span>
+						</p>
+
+					</section>
+
+					<section>
+						<h2>Exemple historique</h2>
+						<h3>Soundex</h3>
+						<ul>
+							<li>Algorithme de normalisation phonétique, breveté en 1918, utilisé par l'administration US</li>
+							<li>Destiné à effacer les variances de prononciation et d'écriture</li>
+							<li>Algorithme dans <a target="_blank" href="https://fr.wikipedia.org/wiki/Soundex">wikipédia</a></li>
+						</ul>
+						<hr>
+						<h3>Exemple</h3>
+						<input type="text" onkeyup="transform_soundex(this.value)" id="soundex_input" style="width:33%; font-size: 24px;"> <span id="soundex_output"></span>
+						<script>
+
+							function transform_soundex(text) {
+								console.log(text);
+								var out = document.getElementById("soundex_output");
+								out.innerText = SoundEx(text, 4);
+							}
+
+//							$(function(){
+//								$("#soundex_input").change(function(e){
+//									console.log("input:", $("#soundex_input").val());
+//								});
+//							});
+						</script>
+					</section>
+
+					<section>
+						<h2>Type de normalisations et pré-traitements</h2>
+						<ul>
+							<li>Normalisations <span class="soft-highlight">textuelles</span>: casse, effacement des diacritiques</li>
+							<li>Normalisations <span class="soft-highlight">linguistiques</span>: lemmatisation, racinisation</li>
+							<li>Normalisation <span class="soft-highlight">phonétiques</span>: Soundex, métaphone, double-métaphone, Snowball, etc</li>
+							<li>Filtrage: stop words</li>
+							<li>Normalisation <span class="soft-highlight">mathématiques</span>: bi-grams</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Lemmatisation</h2>
+						<ul>
+							<li>Transformation en forme canonique
+								<br><span class="smaller">infirmières &rarr; infirmier</span>
+								<br><span class="smaller">des/une &rarr; un</span>
+							</li>
+							<li class="topmargin">Ambiguités homographiques
+								<br><span class="smaller">tu jumelles (&rarr; jumeler) vs (des jumelles &rarr; jumelle)</span>
+							</li>
+							<li class="topmargin">Sensibles aux erreurs typographiques</li>
+							<li class="topmargin">bonne précision</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Racinisation</h2>
+						<ul>
+							<li>Ou stemming en anglais</li>
+							<li>Transformation vers la racine morphologique supposée
+								<br><span class="smaller">mang &larr; manger+flexions, mangeur</span>
+								<br><span class="smaller">mens &larr; mentir+flexions, menteur, mensonge</span>
+							</li>
+							<li>Ambiguités sémantiques et morphologiques
+								<br><span class="smaller">général - généraliser - généralement</span>
+							</li>
+							<li>Par algorithmes ou par dictionnaires</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Stop words</h2>
+						<ul>
+							<li>Technique permettant d'éviter les faux négatifs</li>
+							<li>Élimination des mots trop communs pour être discriminants</li>
+							<li>Pronom, déterminants, adverbes</li>
+							<li>Verbes faibles (auxilliaires et verbes support ou sémantiquement faibles)
+								<br><span class="smaller">do, give, have, make, take</span>
+							</li>
+							<li>De moins en moins utilisés</li>
+						</ul>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Multiplions les index</h2>
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Pourquoi faire ?</h2>
+						<ul>
+							<li>Améliorer les résultats</li>
+							<li>Un index par type de normalisation</li>
+							<li>Pondérer les index/les normalisations</li>
+							<li>Répercuter dans les scores des documents</li>
+							<li> &rarr; #WIN</li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Exemple</h2>
+						<table>
+							<tr>
+								<td>Doc1</td>
+								<td>Regarde, ces seaux débordent
+									<br>[casse+diac]
+									<span class="token">regarde</span>
+									<span class="token">ces</span>
+									<span class="token">seaux</span>
+									<span class="token">debordent</span>
+									<br>[stemming]
+									<span class="token">regard</span>
+									<span class="token">un</span>
+									<span class="token">seau</span>
+									<span class="token">debord</span>
+									<br>[phonet.]
+									<span class="token">røgard</span>
+									<span class="token">ce</span>
+									<span class="token">so</span>
+									<span class="token">debɔrd</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Doc2</td>
+								<td>Ce sot me gave
+									<br>[casse+diac]
+									<span class="token">ce</span>
+									<span class="token">sot</span>
+									<span class="token">me</span>
+									<span class="token">gave</span>
+									<br>[stemming.]
+									<span class="token">ce</span>
+									<span class="token">sot</span>
+									<span class="token">m</span>
+									<span class="token">gav</span>
+									<br>[phonet.]
+									<span class="token">cø</span>
+									<span class="token">so</span>
+									<span class="token">mø</span>
+									<span class="token">gav</span>
+								</td>
+							</tr>
+						</table>
+						<hr>
+						<h4>Requêtes</h4>
+						<p>
+							seau - sot - sceau
+							<br>regardons ce gavage
+							<br>il me gave
+						</p>
+
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Créons notre algorithme !</h2>
+						<h4>Tous les index que l'on veut !</h4>
+						<table>
+							<tr>
+								<td>
+									<ul>
+										<li>texte exact</li>
+										<li>casse</li>
+										<li>diacritiques</li>
+										<li>casse+diacritiques</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>lemmatisation</li>
+										<li>racinisation</li>
+										<li>n-grams</li>
+										<li>phonétique</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Pondérons</h2>
+
+						<table>
+							<tr>
+								<td style="width: 50%;">
+									<ul>
+										<li>texte exact <span class="ponderation">1.0</span></li>
+										<li>casse <span class="ponderation">0.9</span></li>
+										<li>diacritiques <span class="ponderation">0.9</span></li>
+										<li>casse+diacritiques <span class="ponderation">0.8</span></li>
+									</ul>
+								</td>
+								<td  style="width: 50%;">
+									<ul>
+										<li>lemmatisation <span class="ponderation">0.6</span></li>
+										<li>racinisation <span class="ponderation">0.3</span></li>
+										<li>n-grams <span class="ponderation">0.6</span></li>
+										<li>phonétique <span class="ponderation">0.5</span></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<h3 class="topmargin">Utilisation</h3>
+						<ul>
+							<li>Chaque index, suivant sa normalisation, offre un niveau de pertinence différent</li>
+							<li>Le calcul de score peut utiliser un ou plusieurs index</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Elements de l'algorithme</h2>
+						<h4>Modifieurs lexicaux possible</h4>
+						<ul>
+							<li>Index utilisés</li>
+							<li>Fréquence de l'unite lexicale dans le document</li>
+							<li>Le nombre d'unités lexicales dans le document</li>
+							<li>La fréquence du mot dans la langue</li>
+							<li>Fréquence dans des champs spécifiques</li>
+						</ul>
+						<h4 class="topmargin">Modifieurs contextuels</h4>
+						<ul>
+							<li>Langue utilisée</li>
+							<li>Colocation des termes (n-grams)</li>
+							<li>Classification sémantique du document</li>
+							<li>« PageRank» du site, <span class="smaller">nombre de pointeurs vers le doc</span></li>
+							<li>Date de publication</li>
+							<li><span class="smaller">clic sur résultat, pays, centres d'intérêt, sexe, ...</span></li>
+						</ul>
+						<p>etc etc</p>
+					</section>
+
+					<section>
+						<h4>Résumé</h4>
+						<h2>L'algorithme</h2>
+						<p>Une function heuristique pondérant une grande variétés de paramètres</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Difficultés d'un moteur de recherche</h2>
+						<ul>
+							<li>
+								<span style="text-decoration: line-through" class="smaller">Trouver les documents qui correspondent à la requête</span>
+								<br>Trouver les documents qui correspondent à ce que cherche l'utilisateur
+							</li>
+							<li>Les difficultés de la langue
+								<br><span class="smaller">ni sémantique, ni énonciation</span>
+							</li>
+							<li>La course au positionnement</li>
+							<li>L'évaluation des améliorations</li>
+							<li>Les temps de réponse</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>The end</h2>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber:true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
