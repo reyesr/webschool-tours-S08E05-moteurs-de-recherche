@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Webschool Tours S08E05</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -32,6 +32,34 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<script src="js/soundex.js"></script>
+
+		<style>
+			.smaller {
+				font-size: 0.75em !important;
+			}
+			.topmargin {
+				margin-top: 1em !important;
+			}
+			img.noborder {
+				border: 0px !important;
+			}
+			.token {
+				background-color: white;
+				border: 1px solid #AAA;
+				color: black;
+				margin-right: 8px !important;
+				padding: 0px 8px 0px 8px !important;
+			}
+			.ponderation {
+				float: right;
+				color: greenyellow;
+				font-weight: bold;
+				margin-left: 16px;;
+				display: inline-block;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -41,338 +69,596 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>Webschool Tours</h1>
+					<h2>S08E05</h2>
+					<h3>Démystifions les moteurs de recherche</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small><a href="#">Rodrigo Reyes</a> / <a href="http://twitter.com/nogunner">@nogunner</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<h2>Votre speaker</h2>
+					<h4>Rodrigo Reyes</h4>
+					<ul>
+						<li>Linguiste</li>
+						<li>Informaticien</li>
+						<li>CTO Orthomatique</li>
+					</ul>
 				</section>
 
-				<!-- Example of nested vertical slides -->
+				<section>
+					<h2>À propos</h2>
+					<h4>Sujets traités</h4>
+					<ul>
+						<li>La recherche de documents textuels</li>
+						<li>Les traitements linguistiques qui améliorent les résultats</li>
+					</ul>
+					<h4 style="margin-top: 2em;">Sujets non-traités</h4>
+					<ul>
+						<li>« l'algorithme de Google »</li>
+						<li>Ni rien sur comment améliorer son positionnement SEO</li>
+					</ul>
+					<p>Présentation destinée à l'édification personnelle</p>
+				</section>
+
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>La recherche de documents</h2>
 					</section>
+
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<!--sources: http://www.enssib.fr/content/bonjour-ma-question-porte-sur-le-catalogage-lindexation-et-lexemplarisation-jai-tendance -->
+						<h2>Comment retrouver une information ?</h2>
+
+						<ul>
+							<li>Étiquetage: par mots clés (vocabulaire contrôlé)</li>
+							<li>Classification: catégories et sous-catégories</li>
+							<li>Recherche plein texte (full-text)</li>
+						</ul>
 					</section>
+
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
+						<h2>Recherche plein texte</h2>
+						<ul>
+							<li>Texte libre</li>
+							<li>Porte sur le contenu textuel</li>
+							<li>/!\ uniquement sur le contenu textuel</li>
+						</ul>
 					</section>
-				</section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+						<h2>Les cousins germains</h2>
+						<ul>
+							<li>Le tri-routage <br/><span class="smaller">veille concurrentielle, alertes, filtrage, classification automatique</span></li>
+							<li>Analyse sémantique <br/><span class="smaller">catégorisation de contenu, repérage d'entités nommées, analyse de sentiments</span></li>
+						</ul>
 					</section>
 				</section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
 				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
+					<section>
+						<h2>Moteur de recherche</h2>
+						<ul>
+							<li>Service permettant de trouver/retrouver un document</li>
+							<li>À partir d'une requête en texte libre</li>
+						</ul>
+						<h4 style="margin-top: 2em;">Objectif</h4>
 						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+							Trouver les documents pertinents qui correspondent à la requête
 						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
 					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<section>
+						<h2>Première étape</h2>
+						<h3>Trouver les documents</h3>
+					</section>
+					<section>
+						<h2>L'index inversé</h2>
+						<h4>cette brique technique injustement méconnue</h4>
+					</section>
 
-    var nodes = document.querySelectorAll( selector );
+					<section>
+						<h2>Pourquoi inversé</h2>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+						<ul>
+							<li>Pas inversé: du document vers les éléments qui le composent
+								<br>
+								<table>
+									<tr>
+										<td>Doc1 &rarr;</td><td>mot1, mot2, mot3, ...</td>
+									</tr>
+									<tr>
+										<td>Doc2 &rarr;</td><td>mot2, mot4, mot5, ...</td>
+									</tr>
+								</table>
+							</li>
+							<li>Inversé: de l'élément vers les documents qui le contiennent
+								<br>
+								<table>
+									<tr>
+										<td>Mot1 &rarr;</td><td>Doc1, Doc45, Doc76, ...</td>
+									</tr>
+									<tr>
+										<td>Mot2 &rarr;</td><td>Doc1, Doc2, Doc18, ...</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+					<section>
+						<h2>Mise en application</h2>
+					</section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
+					<section>
+						<h2>Recherche dans une base de 2 documents</h2>
+						<table>
 							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
+								<td>Doc1</td><td>Le, chat, a, miaulé, dans, la, grange</td>
 							</tr>
 							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
+								<td>Doc2</td><td>Félix, le, chat, repartira, demain</td>
+							</tr>
+						</table>
+
+						<hr>
+						<h4>Recherchons dans l'index inversé</h4>
+						<ul>
+							<li>chat</li>
+							<li>Félix le chat</li>
+							<li>miauler granges</li>
+							<li>felix</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Recherche dans une base de 2 documents (2)</h2>
+						<p>Normalisation du texte: minuscule sans accent</p>
+						<table>
+							<tr>
+								<td>Doc1</td><td>le, chat, a, miaule, dans, la, grange</td>
 							</tr>
 							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
+								<td>Doc2</td><td>felix, le, chat, repartira, demain</td>
 							</tr>
-						</tbody>
-					</table>
+						</table>
+						<hr>
+						<h4 >Recherchons dans l'index inversé</h4>
+						<ul>
+							<li>chat</li>
+							<li>Félix le chat</li>
+							<li>miauler granges</li>
+							<li>felix</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Recherche dans une base de 2 documents (3)</h2>
+						<p>minuscule sans accent <br> + lemmatisation (lemme = forme canonique, «neutre»)</p>
+						<table>
+							<tr>
+								<td>Doc1</td><td>le, chat, avoir, miauler, dans, le, grange</td>
+							</tr>
+							<tr>
+								<td>Doc2</td><td>felix, le, chat, repartir, demain</td>
+							</tr>
+						</table>
+						<hr>
+						<ul>
+							<li>chat</li>
+							<li>chattes</li>
+							<li>miauler granges</li>
+							<li>avoir grange</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h2>Résumé de la mise en pratique</h2>
+						<ul>
+							<li>Un index inversé</li>
+							<li>Un traitement de normalisation (textuel ou linguistique) sur les mots</li>
+							<li>Mais des problèmes et difficultés: <br>
+								<span class="smaller">choix des prétraitements - pertinence - niveau de normalisation</span>
+							</li>
+						</ul>
+
+					</section>
+
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+					<section>
+						<h2>Calculer la page de résultat</h2>
+					</section>
+
+					<section>
+						<h2>Qu'est-ce qu'un résultat?</h2>
+						<img class="stretch " style="background-color: #FFF;" src="img/sets.png">
+					</section>
+
+					<section>
+						<h2>Calculer un résultat</h2>
+						<img class="" style="float:left; background-color: #FFF; width: 20%;" src="img/sets.png">
+						<h4>Ensembles &amp; algèbre booléenne</h4>
+						<p>
+							1 terme = 1 ensemble de documents
+						 <br>Le résultat est l'intersection des ensembles
+						</p>
+						<h4>Calcul de score</h4>
+						<p>
+							1 terme = 1 ensemble de documents
+							<br>Chaque ensemble a un score
+							<br>On attribue un total de scores à chaque document
+							<br>Le résultat est la liste des documents triés par leur score
+						</p>
+					</section>
+
 				</section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
+					<section>
+						<h2>Évaluer les résultats</h2>
+						<h4>interlude mathématique</h4>
+					</section>
+
+					<section>
+						<h2>Contexte documentaire</h2>
+						<img class="stretch" style="background-color: #FFF; border: 16px solid white;" src="img/sets-and-docs.png">
+					</section>
+
+					<section>
+						<h2>Évaluer la qualité</h2>
+						<h3>La précision</h3>
+						<p>
+							Calcul le taux de faux positifs (documents non-pertinents retournés)
+						</p>
+						<table>
+							<tr><td rowspan="2" style="vertical-align: middle; border-bottom: 0px; ">Précision = </td><td style="text-align: center;">Nombre de résultats pertinents retournés</td></tr>
+							<tr><td style="text-align: center;">Nombre total de résultats retournés</td></tr>
+						</table>
+
+						<h3 class="topmargin">Le rappel (recall)</h3>
+						<p>
+							Calcul le taux de faux négatifs (documents pertinents ratés)
+						</p>
+						<table>
+							<tr><td rowspan="2" style="vertical-align: middle; border-bottom: 0px; ">Rappel = </td><td style="text-align: center;">Nombre de résultats pertinents retournés</td></tr>
+							<tr><td style="text-align: center;">Nombre total de résultats pertinents dans la base</td></tr>
+						</table>
+					</section>
+
+					<section>
+						<h2>Impact des pré-traitements</h2>
+						<h3>Normalisation «légère»</h3>
+						<p class="smaller">minuscule, effacement des diacritiques, lemmatisation</p>
+						<p>&rarr; Bonne précision, rappel bas</p>
+						<h3 class="topmargin">Normalisation «agressive»</h3>
+						<p class="smaller">normalisation phonétique, racinisation</p>
+						<p>&rarr; Précision basse, bon rappel</p>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Traitements du texte</h2>
+					</section>
+
+					<section>
+						<h2>Chaine de traitement</h2>
+						<ol>
+							<li>Tokenisation: découpages en unités lexicales
+								<br><span class="smaller">Spécifique à chaque langue</span>
+								<br><span class="smaller">mots multiples: compte rendu, aujourd'hui, donne-moi vs couvre-feu</span>
+								<br><span class="smaller">patterns particuliers: (800) 123-4567, 11/02/2016</span>
+							</li>
+							<li class="topmargin">
+								Normalisation: transformer chaque unité lexicale
+								<br><span class="smaller">Également spécifique à chaque langue</span>
+								<br><span class="smaller">Grande variété de normalisations</span>
+							</li>
+							<li  class="topmargin">
+								Stockage: chaque unité lexicale pointe sur un ensemble de documents
+								<br><span class="smaller">Pondération contextuelle (titre, corps de page, annexes)</span>
+								<br><span class="smaller">Nombre d'occurrences, colocations, </span>
+							</li>
+						</ol>
+					</section>
+
+					<section>
+						<h2>Chaine de traitement (2)</h2>
+						<h5>Document brut</h5>
+						<p>Demain, les élèves mangeront des frites.</p>
+						<h5>Tokens</h5>
+						<p>
+							<span class="token">Demain</span>
+							<span class="token">les</span>
+							<span class="token">élèves</span>
+							<span class="token">mangeront</span>
+							<span class="token">des</span>
+							<span class="token">frites</span>
+						</p>
+						<h5>Normalisation (casse + diacritiques + lemmatisation)</h5>
+						<p>
+							<span class="token">demain</span>
+							<span class="token">un</span>
+							<span class="token">eleve</span>
+							<span class="token">manger</span>
+							<span class="token">un</span>
+							<span class="token">frite</span>
+						</p>
+
+					</section>
+
+					<section>
+						<h2>Rappel historique</h2>
+						<h3>Soundex</h3>
+						<ul>
+							<li>Algorithme de normalisation phonétique, breveté en 1918, utilisé par l'administration US</li>
+							<li>Destiné à effacer les variances de prononciation et d'écriture</li>
+						</ul>
+						<hr>
+						<h3>Exemple</h3>
+						<input type="text" onkeyup="transform_soundex(this.value)" id="soundex_input" style="width:33%; font-size: 24px;"> <span id="soundex_output"></span>
+						<script>
+
+							function transform_soundex(text) {
+								console.log(text);
+								var out = document.getElementById("soundex_output");
+								out.innerText = SoundEx(text);
+							}
+
+//							$(function(){
+//								$("#soundex_input").change(function(e){
+//									console.log("input:", $("#soundex_input").val());
+//								});
+//							});
+						</script>
+					</section>
+
+					<section>
+						<h2>Type de normalisations et pré-traiements</h2>
+						<ul>
+							<li>Normalisations textuelles: casse, effacement des diacritiques, découpage des mots</li>
+							<li>Normalisations linguistiques: lemmatisation, racinisation</li>
+							<li>Normalisation phonétiques: Soundex, métaphone, double-métaphone, Snowball, etc</li>
+							<li>Filtrage: stop words</li>
+							<li>Normalisation mathématiques: bigrammes, n-grammes</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Lemmatisation</h2>
+						<ul>
+							<li>Transformation en forme canonique (</li>
+							<li>Ex: infirmières &rarr; infirmier, des/une &rarr; un</li>
+							<li>Ambiguités homographiques
+								<br><span class="smaller">tu jumelles (&rarr; jumeler) vs (des jumelles &rarr; jumelle)</span>
+							</li>
+							<li>Sensibles aux erreurs typographiques</li>
+							<li>bonne précision</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Racinisation</h2>
+						<ul>
+							<li>Ou stemming en anglais</li>
+							<li>Transformation vers la racine morphologique supposée
+								<br><span class="smaller">mang &larr; manger+flexions, mangeur</span>
+								<br><span class="smaller">mens &larr; mentir+flexions, menteur, mensonge</span>
+							</li>
+							<li>Ambiguités sémantiques et morphologiques
+								<br><span class="smaller">général - généraliser - généralement</span>
+							</li>
+							<li>Par algorithmes ou par dictionnaires</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Stop words</h2>
+						<ul>
+							<li>Technique permettant d'éviter les faux négatifs</li>
+							<li>Élimination des mots trop communs pour être discriminants</li>
+							<li>Pronom, déterminants, adverbes</li>
+							<li>Verbes faibles (auxilliaires et verbes support ou sémantiquement faibles)
+								<br><span class="smaller">do, give, have, make, take</span>
+							</li>
+							<li>De moins en moins utilisés</li>
+						</ul>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Multiplions les index</h2>
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Pourquoi faire ?</h2>
+						<ul>
+							<li>Un index par type de normalisation</li>
+							<li>Pondérer les index/les normalisations</li>
+							<li>Répercuter dans les scores des documents</li>
+							<li> &rarr; #WIN</li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Exemple</h2>
+						<table>
+							<tr>
+								<td>Doc1</td>
+								<td>Regarde, ces seaux débordent
+									<br>[casse+diac]
+									<span class="token">regarde</span>
+									<span class="token">ces</span>
+									<span class="token">seaux</span>
+									<span class="token">debordent</span>
+									<br>[stemming]
+									<span class="token">regard</span>
+									<span class="token">un</span>
+									<span class="token">seau</span>
+									<span class="token">debord</span>
+									<br>[phonet.]
+									<span class="token">røgard</span>
+									<span class="token">ce</span>
+									<span class="token">so</span>
+									<span class="token">debɔrd</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Doc2</td>
+								<td>Ce sot me gave
+									<br>[casse+diac]
+									<span class="token">ce</span>
+									<span class="token">sot</span>
+									<span class="token">me</span>
+									<span class="token">gave</span>
+									<br>[stemming.]
+									<span class="token">ce</span>
+									<span class="token">sot</span>
+									<span class="token">m</span>
+									<span class="token">gav</span>
+									<br>[phonet.]
+									<span class="token">cø</span>
+									<span class="token">so</span>
+									<span class="token">mø</span>
+									<span class="token">gav</span>
+								</td>
+							</tr>
+						</table>
+						<hr>
+						<h4>Requêtes</h4>
+						<p>
+							seau - sot - sceau
+							<br>regardons ce gavage
+							<br>il me gave
+						</p>
+
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Créons notre algorithme !</h2>
+
+						<table>
+							<tr>
+								<td>
+									<ul>
+										<li>texte exact</li>
+										<li>casse</li>
+										<li>diacritiques</li>
+										<li>casse+diacritiques</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>lemmatisation</li>
+										<li>racinisation</li>
+										<li>phonétique 1</li>
+										<li>phonétique 2</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</section>
+
+					<section>
+						<h4>Multiplions les index</h4>
+						<h2>Pondérons</h2>
+
+						<table>
+							<tr>
+								<td style="width: 50%;">
+									<ul>
+										<li>texte exact <span class="ponderation">1.0</span></li>
+										<li>casse <span class="ponderation">0.9</span></li>
+										<li>diacritiques <span class="ponderation">0.9</span></li>
+										<li>casse+diacritiques <span class="ponderation">0.8</span></li>
+									</ul>
+								</td>
+								<td  style="width: 50%;">
+									<ul>
+										<li>lemmatisation <span class="ponderation">0.6</span></li>
+										<li>racinisation <span class="ponderation">0.3</span></li>
+										<li>n-grams <span class="ponderation">0.6</span></li>
+										<li>phonétique 1 <span class="ponderation">0.5</span></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<h3 class="topmargin">Utilisation</h3>
+						<ul>
+							<li>Chaque index, suivant sa normalisation, offre un niveau de pertinence différent</li>
+							<li>Le calcul de score peut utiliser un ou plusieurs index</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Elements de l'algorithme</h2>
+						<h4>Modifieurs locaux possible</h4>
+						<ul>
+							<li>Index utilisés</li>
+							<li>Fréquence de l'unite lexicale dans le document</li>
+							<li>Le nombre d'unités lexicales dans le document</li>
+							<li>La fréquence du mot dans la langue</li>
+							<li>Fréquence dans des champs spécifiques</li>
+						</ul>
+						<h4 class="topmargin">Modifieurs globaux</h4>
+						<ul>
+							<li>Langue utilisée</li>
+							<li>Colocation des termes (n-grams)</li>
+							<li>Classification sémantique du document</li>
+							<li>« PageRank» du document</li>
+							<li>Date de publication</li>
+							<li><span class="smaller">clic sur résultat, pays, centres d'intérêt, sexe, ...</span></li>
+						</ul>
+						<p>etc etc</p>
+					</section>
+
+					<section>
+						<h4>Résumé</h4>
+						<h2>L'algorithme</h2>
+						<p>Une function heuristique pondérant une grande variétés de paramètres</p>
+					</section>
+
 				</section>
 
 				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+					<section>
+						<h2>Difficultés d'un moteur de recherche</h2>
+						<ul>
+							<li>
+								<span style="text-decoration: line-through" class="smaller">Trouver les documents qui correspondent à la requête</span>
+								<br>Trouver les documents qui correspondent à ce que cherche l'utilisateur
+							</li>
+							<li>Les difficultés de la langue
+								<br><span class="smaller">ni sémantique, ni énonciation</span>
+							</li>
+							<li>La course au positionnement</li>
+							<li>L'évaluation des améliorations</li>
+							<li>Les temps de réponse</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+					<section>
+						<h2>The end</h2>
+					</section>
 				</section>
 
 			</div>
@@ -391,6 +677,7 @@ Reveal.addEventListener( 'customevent', function() {
 				progress: true,
 				history: true,
 				center: true,
+				slideNumber:true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -401,7 +688,9 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+
 				]
 			});
 
